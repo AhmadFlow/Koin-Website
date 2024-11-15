@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Koin - Your Cryptocurrency Platform" />
+    <meta
+      name="keywords"
+      content="cryptocurrency, blockchain, digital currency, Koin"
+    />
+    <meta name="author" content="Your Company Name" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="/public/styles/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Koin - Your Cryptocurrency Platform</title>
+  </head>
+  <body class="poppins">
+    <!-- Hero Section -->
+    <section class="w-full h-auto px-4 py-5 bg-dark-purple lg:h-[50rem]">
+      <!-- Header -->
+      <header
+        class="flex items-center justify-between mb-16 lg:container lg:mx-auto lg:max-w-7xl lg:px-6"
+      >
+        <!-- Logo -->
+        <a
+          href="/"
+          class="text-[2.5rem] font-semibold leading-[3.125rem] text-white lg:text-6xl lg:leading-tight"
+        >
+          <h1>K<span class="text-lavender-purple">o</span>in</h1>
+        </a>
+
+        <!-- Mobile Menu Icon -->
+        <button
+          id="menuButton"
+          class="flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:bg-lavender-purple/10 focus:outline-none focus:ring-2 focus:ring-lavender-purple lg:hidden"
+          aria-label="Toggle Menu"
+          aria-expanded="false"
+        >
+          <img
+            class="h-5 w-[1.87rem]"
+            src="/public/svg/hamberger.svg"
+            alt="Menu Icon"
+            aria-hidden="true"
+          />
+        </button>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden items-center gap-[4.69rem] lg:flex">
+          <div
+            id="navLinks"
+            class="flex items-center gap-14 text-xl font-normal text-white"
+          ></div>
+        </nav>
+      </header>
+      <!-- Mobile Menu (Initially Hidden) -->
+      <div
+        id="mobileMenu"
+        class="fixed inset-0 z-50 bg-dark-purple bg-opacity-95 flex flex-col items-center justify-center hidden"
+      >
+        <button
+          id="closeMenuButton"
+          class="absolute top-5 right-5 text-white text-3xl"
+        >
+          &times;
+        </button>
+        <nav class="text-center">
+          <div
+            id="mobileNavLinks"
+            class="flex flex-col items-center gap-6 text-xl font-normal text-white"
+          ></div>
+        </nav>
+      </div>
+      <!-- Main Section -->
+      <main
+        class="flex flex-col items-center gap-9 md:flex-row md:gap-4 lg:container lg:mx-auto lg:max-w-7xl lg:gap-16 lg:px-6"
+      >
+        <!-- Hero Content -->
+        <div class="lg:w-1/2">
+          <h2
+            class="mb-6 text-5xl font-semibold text-white lg:text-7xl lg:leading-tight"
+          >
+            Your one stop Budgeting tool
+          </h2>
+          <p
+            class="mb-6 text-xl font-normal leading-lg text-justify text-white"
+          >
+            A budget is a plan for every dollar you have. It's not magic, but it
+            represents more financial freedom and a life with much less stress A
+            budget is a plan.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 px-6 py-3 text-xl font-medium text-dark-purple bg-lavender-purple rounded-lg transition-all hover:opacity-70"
+            aria-label="Get Started"
+          >
+            Get Started
+            <img
+              class="size-5"
+              src="/public/svg/arrow.svg"
+              alt="Arrow Icon"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+        <img
+          class="w-[90%] h-auto object-cover md:w-[40%] md:mb-0 mb-12"
+          src="/public/images/backCard.png"
+          alt="Koin Cryptocurrency Card"
+        />
+      </main>
+    </section>
+    <!-- Details Section -->
+    <section
+      class="px-4 -mt-14 md:mt-0 lg:-mt-14 mb-6 md:mb-10 lg:container lg:mx-auto lg:max-w-7xl lg:mb-[4.5rem]"
+    >
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="500"
+        class="grid grid-cols-1 gap-6 px-4 py-8 bg-white rounded-2xl shadow-xl md:grid-cols-3 md:gap-10 md:px-10 lg:px-16"
+      >
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-semibold md:text-5xl"
+            >10K<span class="font-bold text-lavender-purple">+</span></span
+          >
+          <span class="text-lg font-normal md:text-xl">Active users</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-semibold md:text-5xl"
+            >$2M<span class="font-bold text-lavender-purple">+</span></span
+          >
+          <span class="text-lg font-normal md:text-xl">Transactions</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-semibold md:text-5xl"
+            >70<span class="font-bold text-lavender-purple">+</span></span
+          >
+          <span class="text-lg font-normal md:text-xl">Countries</span>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section
+      data-aos="fade-up"
+      data-aos-duration="500"
+      class="px-4 md:flex md:items-center md:justify-between md:gap-2 mb-10 lg:mb-[3.25rem] lg:container lg:mx-auto lg:max-w-7xl lg:gap-24"
+    >
+      <img
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        class="w-full h-auto object-cover md:w-[40%] md:mb-0 mb-7"
+        src="/public/images/person.png"
+        alt="Koin Testimonial Card"
+      />
+      <div>
+        <h2
+          class="mb-6 text-4xl font-semibold leading-base md:text-32 md:mb-4 lg:text-5xl"
+        >
+          Finances, made easy. Track, manage & reach your financial goals.
+        </h2>
+        <p class="mb-6 text-xl font-normal leading-lg md:mb-4">
+          Designed to help you take control of your finances and achieve your
+          financial goals. Our app is easy to use and provides a complete
+          overview of your finances, allowing you to manage your money with
+          confidence.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center gap-3 px-6 py-3 text-xl font-medium text-dark-purple bg-lavender-purple rounded-lg transition-all hover:opacity-70"
+          aria-label="Get Started"
+        >
+          Get Started
+          <img
+            class="size-5"
+            src="/public/svg/arrow.svg"
+            alt="Arrow Icon"
+            aria-hidden="true"
+          />
+        </a>
+      </div>
+    </section>
+    <!-- Service Section -->
+    <section class="w-full h-auto bg-gradient-to-br from-sky-50 to-sky-100">
+      <!-- Container -->
+      <div
+        class="px-4 py-8 md:py-[3.37rem] lg:py-20 lg:container lg:mx-auto lg:max-w-7xl"
+      >
+        <!-- Title -->
+        <h2 class="text-4xl font-semibold leading-lg mb-6 md:mb-10">
+          Our Service
+        </h2>
+        <!-- Services Grid -->
+        <section
+          aria-labelledby="services-title"
+          class="grid md:mb-36 lg:mr-64 gap-6 md:gap-x-5 lg:gap-x-[10.81rem] md:gap-y-10 grid-cols-1 md:grid-cols-2 items-start"
+        >
+          <!-- Service 1 -->
+          <article data-aos="fade-up" data-aos-duration="500">
+            <!-- Icon -->
+            <div
+              class="size-20 flex justify-center mb-9 items-center bg-dark-purple shadow-lg rounded-full"
+            >
+              <img
+                class="size-10"
+                src="/public/svg/card.svg"
+                alt="Credit card icon representing accessibility and convenience"
+              />
+            </div>
+            <!-- Title -->
+            <h3 class="text-xl font-semibold leading-lg mb-3">
+              Accessible and Convenient
+            </h3>
+            <!-- Description -->
+            <p class="text-xl font-normal leading-lg">
+              Access the app from anywhere, anytime, and stay on top of your
+              finances. Enjoy no unnecessary fees and manage your finances with
+              ease.
+            </p>
+          </article>
+
+          <!-- Service 2 -->
+          <article data-aos="fade-up" data-aos-duration="500">
+            <!-- Icon -->
+            <div
+              class="size-20 flex justify-center mb-9 items-center bg-dark-purple shadow-lg rounded-full"
+            >
+              <img
+                class="size-10"
+                src="/public/svg/lamp.svg"
+                alt="Lamp icon representing personalized suggestions"
+              />
+            </div>
+            <!-- Title -->
+            <h3 class="text-xl font-semibold leading-lg mb-3">
+              Personalized Suggestions
+            </h3>
+            <!-- Description -->
+            <p class="text-xl font-normal leading-lg">
+              Our app analyzes your spending patterns and offers personalized
+              advice to help you improve your habits, save more, and spend less.
+            </p>
+          </article>
+
+          <!-- Service 3 -->
+          <article data-aos="fade-up" data-aos-duration="500">
+            <!-- Icon -->
+            <div
+              class="size-20 flex justify-center mb-9 items-center bg-dark-purple shadow-lg rounded-full"
+            >
+              <img
+                class="size-10"
+                src="/public/svg/coin.svg"
+                alt="Coin icon representing improved financial management"
+              />
+            </div>
+            <!-- Title -->
+            <h3 class="text-xl font-semibold leading-lg mb-3">
+              Improved Financial Management
+            </h3>
+            <!-- Description -->
+            <p class="text-xl font-normal leading-lg">
+              Our budgeting app provides a complete overview of your finances.
+              Track your spending, set budgets, and monitor your progress
+              effectively.
+            </p>
+          </article>
+
+          <!-- Service 4 -->
+          <article data-aos="fade-up" data-aos-duration="500">
+            <!-- Icon -->
+            <div
+              class="size-20 flex justify-center mb-9 items-center bg-dark-purple shadow-lg rounded-full"
+            >
+              <img
+                class="size-10"
+                src="/public/svg/rich.svg"
+                alt="Rich icon representing automated expenses"
+              />
+            </div>
+            <!-- Title -->
+            <h3 class="text-xl font-semibold leading-lg mb-3">
+              Automated Expenses
+            </h3>
+            <!-- Description -->
+            <p class="text-xl font-normal leading-lg">
+              Automatically categorizes your transactions, making it easier to
+              monitor your spending and budgeting.
+            </p>
+          </article>
+        </section>
+      </div>
+    </section>
+    <!-- Download Section -->
+    <section
+      class="relative w-full h-auto lg:h-[21.5rem] md:h-[16.65rem] bg-dark-purple text-white mb-10"
+    >
+      <!-- Container -->
+      <div
+        class="px-4 pt-6 md:py-[3.37rem] lg:py-20 lg:container lg:mx-auto lg:max-w-7xl"
+      >
+        <!-- Download From Market -->
+        <div
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          class="mb-12 lg:mb-10"
+        >
+          <!-- Title -->
+          <h2
+            class="text-4xl font-semibold leading-md mb-6 md:mb-10 md:max-w-lg"
+          >
+            More your control for your money
+          </h2>
+          <!-- Download Buttons -->
+          <div class="flex items-center gap-2 md:w-1/2">
+            <a href="https://play.google.com/store">
+              <img
+                class="w-full h-auto"
+                src="/public/images/google-play.png"
+                alt="Google Play icon for Android app"
+              />
+            </a>
+            <a href="https://www.apple.com/app-store/">
+              <img
+                class="w-full h-auto"
+                src="/public/images/apple-store.png"
+                alt="Apple Store icon for iOS app"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- Image -->
+        <div class="w-full h-full flex justify-center">
+          <img
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            class="w-60 h-auto object-cover md:w-[15rem] lg:w-[20rem] md:absolute md:right-[4.62rem] lg:-top-56 md:-top-40 md:bottom-0 max-w-full"
+            src="/public/images/mobile.png"
+            alt="Illustration of the mobile app interface"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section
+      data-aos="fade-up"
+      data-aos-duration="500"
+      class="px-4 md:flex md:items-center md:justify-between md:gap-2 mb-10 lg:mb-[3.25rem] lg:container lg:mx-auto lg:max-w-7xl lg:gap-24"
+    >
+      <img
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        class="hidden w-full h-auto object-cover md:block md:w-[40%]"
+        src="/public/images/woman.png"
+        alt="Koin Testimonial Card"
+      />
+      <div>
+        <h2
+          class="mb-6 text-4xl font-semibold leading-md md:text-32 md:mb-4 lg:text-5xl"
+        >
+          Benefits
+        </h2>
+        <p class="mb-6 text-xl font-normal leading-lg">
+          Designed to help you take control of your finances and achieve your
+          financial goals. Our app is easy to use and provides a complete
+          overview of your finances, allowing you to manage your money with
+          confidence.
+        </p>
+        <ul class="flex flex-col gap-4 text-xl font-normal leading-lg">
+          <li class="flex items-center gap-4">
+            <img class="size-10" src="./svg/check.svg" alt="check" />Accessible
+            and Convenient
+          </li>
+          <li class="flex items-center gap-4">
+            <img
+              class="size-10"
+              src="./svg/check.svg"
+              alt="check"
+            />Personalized Suggestions
+          </li>
+          <li class="flex items-center gap-4">
+            <img class="size-10" src="./svg/check.svg" alt="check" />Improved
+            Financial Management
+          </li>
+          <li class="flex items-center gap-4">
+            <img class="size-10" src="./svg/check.svg" alt="check" />Automated
+            expenses
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Comments Section -->
+    <section class="w-full h-auto bg-gradient-to-br from-sky-50 to-sky-100">
+      <!-- Container -->
+      <div
+        class="px-4 py-8 md:py-[3.37rem] lg:py-20 lg:container lg:mx-auto lg:max-w-7xl"
+      >
+        <!-- Title -->
+        <h2
+          class="text-xl md:text-center font-semibold leading-lg mb-6 md:mb-10"
+        >
+          See what our customers have to say
+        </h2>
+        <!-- Comments -->
+        <div class="relative">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            class="w-full mb-6 overflow-x-hidden"
+          >
+            <div
+              id="comments-container"
+              class="flex space-x-6 pb-6 snap-x snap-mandatory overflow-x-auto scrollbar-hide"
+            >
+              <!-- Comment 1 -->
+              <div
+                class="snap-center p-6 rounded-2xl bg-white flex-shrink-0 w-80 md:w-96 mx-2 transition-all duration-300 hover:shadow-lg"
+              >
+                <!-- Title -->
+                <h2 class="text-xl font-semibold leading-lg mb-4">
+                  Game changer
+                </h2>
+                <!-- Description -->
+                <p class="text-xl font-normal leading-lg mb-4">
+                  Since using this app, my financial management has improved.
+                  Not only have I saved money, but I now feel in control of my
+                  future finances.
+                </p>
+                <!-- Rate -->
+                <div class="flex gap-1.5 mb-6">
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                </div>
+                <!-- Author -->
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-6">
+                    <img
+                      class="w-14 h-auto rounded-full"
+                      src="/public/images/Image.png"
+                      alt="User avatar"
+                    />
+                    <div class="space-y-3">
+                      <h3 class="text-xl font-semibold leading-lg">
+                        Chamlikra Shevin
+                      </h3>
+                      <span class="text-xl font-normal leading-lg">London</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Comment 2 -->
+              <div
+                class="snap-center p-6 rounded-2xl bg-white flex-shrink-0 w-80 md:w-96 mx-2 transition-all duration-300 hover:shadow-lg"
+              >
+                <!-- Title -->
+                <h2 class="text-xl font-semibold leading-lg mb-4">
+                  More control of my finances
+                </h2>
+                <!-- Description -->
+                <p class="text-xl font-normal leading-lg mb-4">
+                  I've saved more money and gained better control over my
+                  finances. I'd highly recommend this app to anyone seeking
+                  financial.
+                </p>
+                <!-- Rate -->
+                <div class="flex gap-1.5 mb-6">
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                </div>
+                <!-- Author -->
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-6">
+                    <img
+                      class="w-14 h-auto rounded-full"
+                      src="/public/images/woman1.png"
+                      alt="User avatar"
+                    />
+                    <div class="space-y-3">
+                      <h3 class="text-xl font-semibold leading-lg">
+                        Shakira Ashmor
+                      </h3>
+                      <span class="text-xl font-normal leading-lg">Norway</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Comment 3 -->
+              <div
+                class="snap-center p-6 rounded-2xl bg-white flex-shrink-0 w-80 md:w-96 mx-2 transition-all duration-300 hover:shadow-lg"
+              >
+                <!-- Title -->
+                <h2 class="text-xl font-semibold leading-lg mb-4">
+                  Financial Revolution
+                </h2>
+                <!-- Description -->
+                <p class="text-xl font-normal leading-lg mb-4">
+                  This app changed my habits. I used to overspend without
+                  noticing, but now I track expenses and set budgets
+                  effectively.
+                </p>
+                <!-- Rate -->
+                <div class="flex gap-1.5 mb-6">
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                </div>
+                <!-- Author -->
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-6">
+                    <img
+                      class="w-14 h-auto rounded-full"
+                      src="/public/images/man1.png"
+                      alt="User avatar"
+                    />
+                    <div class="space-y-3">
+                      <h3 class="text-xl font-semibold leading-lg">
+                        John Nima
+                      </h3>
+                      <span class="text-xl font-normal leading-lg"
+                        >New Castle</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Comment 4 -->
+              <div
+                class="snap-center p-6 rounded-2xl bg-white flex-shrink-0 w-80 md:w-96 mx-2 transition-all duration-300 hover:shadow-lg"
+              >
+                <!-- Title -->
+                <h2 class="text-xl font-semibold leading-lg mb-4">
+                  Budget Breakthrough
+                </h2>
+                <!-- Description -->
+                <p class="text-xl font-normal leading-lg mb-4">
+                  This app has changed how I manage my money. It’s helped me
+                  reduce extra costs and boost my savings faster than expected.
+                </p>
+                <!-- Rate -->
+                <div class="flex gap-1.5 mb-6">
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                  <img
+                    class="size-4"
+                    src="/public/svg/star.svg"
+                    alt="Star icon"
+                  />
+                </div>
+                <!-- Author -->
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-6">
+                    <img
+                      class="w-14 h-auto rounded-full"
+                      src="/public/images/man2.png"
+                      alt="User avatar"
+                    />
+                    <div class="space-y-3">
+                      <h3 class="text-xl font-semibold leading-lg">
+                        Salivan White
+                      </h3>
+                      <span class="text-xl font-normal leading-lg">USA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination -->
+            <div class="flex justify-center mt-4 gap-9">
+              <button id="prev-btn">
+                <img src="./svg/arrows.svg" alt="back" />
+              </button>
+              <button id="next-btn">
+                <img src="./svg/arrowleft.svg" alt="next" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="w-full h-auto bg-dark-purple">
+      <div
+        class="bg-dark-purple lg:container lg:max-w-7xl lg:mx-auto px-4 py-8 md:py-[3.37rem] lg:py-20"
+      >
+        <!-- Flex Container-->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center w-full"
+        >
+          <!-- Section 1 -->
+          <div class="mb-8 md:mb-0 w-full md:w-auto">
+            <!-- Logo -->
+            <a
+              href="/"
+              class="inline-block mb-10 lg:mb-[3.25rem] text-[2.5rem] lg:text-6xl font-semibold leading-[3.125rem] lg:leading-tight text-white"
+            >
+              <h1>K<span class="text-lavender-purple">o</span>in</h1>
+            </a>
+            <!-- Navigation -->
+            <nav>
+              <ul
+                class="mb-6 md:mb-[3.75rem] lg:mb-10 space-y-6 lg:space-y-0 lg:flex lg:items-center lg:gap-8 text-xl font-normal text-white"
+              >
+                <li>
+                  <a href="#faq" class="relative group">
+                    FAQ's
+                    <span
+                      class="absolute inset-x-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" class="relative group">
+                    Contact us
+                    <span
+                      class="absolute inset-x-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#terms" class="relative group">
+                    Terms & conditions
+                    <span
+                      class="absolute inset-x-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#privacy" class="relative group">
+                    Privacy Policy
+                    <span
+                      class="absolute inset-x-0 bottom-[-4px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"
+                    ></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Social Media -->
+            <div class="flex items-center gap-5">
+              <a href="#instagram" aria-label="Instagram"
+                ><img src="./svg/instagram.svg" alt="Instagram icon"
+              /></a>
+              <a href="#facebook" aria-label="Facebook"
+                ><img src="./svg/facebooK.svg" alt="Facebook icon"
+              /></a>
+              <a href="#twitter" aria-label="Twitter"
+                ><img src="./svg/twitter.svg" alt="Twitter icon"
+              /></a>
+              <a href="#linkedin" aria-label="LinkedIn"
+                ><img src="./svg/linkedin.svg" alt="LinkedIn icon"
+              /></a>
+            </div>
+          </div>
+          <!-- Section 2 -->
+          <div class="flex flex-col justify-between w-full md:w-auto">
+            <!-- Email Subscription -->
+            <div class="mb-6 md:mb-10 w-full md:w-96">
+              <label
+                class="inline-block mb-3.5 text-xl font-normal text-white"
+                for="email"
+              >
+                Join our mailing list
+              </label>
+              <form action="#" method="POST" class="w-full">
+                <div
+                  class="flex items-center mb-2 md:mb-3 lg:mb-10 bg-white rounded-md overflow-hidden"
+                >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-3 border-none focus:outline-none text-base"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="px-4 py-3 text-white font-semibold bg-purple-500 hover:bg-purple-600 rounded-tr-md rounded-br-md whitespace-nowrap text-base"
+                  >
+                    Send
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- App Store Links -->
+            <div class="flex items-center gap-4 w-full md:w-96">
+              <a href="https://play.google.com/store" class="w-1/2">
+                <img
+                  class="w-full h-auto"
+                  src="/public/images/google-play.png"
+                  alt="Download on Google Play"
+                />
+              </a>
+              <a href="https://www.apple.com/app-store/" class="w-1/2">
+                <img
+                  class="w-full h-auto"
+                  src="/public/images/apple-store.png"
+                  alt="Download on App Store"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="/public/scripts/app.js"></script>
+  </body>
+</html>
